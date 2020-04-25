@@ -1,0 +1,17 @@
+extend ../layout/layout1
+block content
+  h1 Users
+  a.badge.badge-primary.mb-3(href="/users/create") Create
+  table.table.table-dark
+    tr
+      th Name
+      th Phone Number
+      th Action
+    each user in users
+      tr
+        td=user.name
+        td=user.phoneNumber
+        td
+          a.badge.badge-warning(href="./users/"+user.id+"/update") Update
+          span &nbsp
+          a.badge.badge-danger(href="./users/"+user.id+"/delete") Delete
