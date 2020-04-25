@@ -1,0 +1,9 @@
+extend ../layout/layout1
+block content
+  h1 Update phone number
+  form(method="post")
+    .form-group
+        label(for="phoneNumber") Phone number
+        input.form-control#phone(type="text" name="phoneNumber")
+    button.btn.btn-light Update
+    
